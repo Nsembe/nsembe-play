@@ -1,0 +1,14 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Permissions for the main window. There is deliberately no filesystem plugin: all file access goes through Rust commands, and the folder picker only returns a path that Rust validates.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-set-fullscreen",
+    "core:window:allow-is-fullscreen",
+    "core:window:allow-set-title",
+    "dialog:allow-open",
+    "log:default"
+  ]
+}

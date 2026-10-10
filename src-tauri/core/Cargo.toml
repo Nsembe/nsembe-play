@@ -1,0 +1,29 @@
+[package]
+name = "nsembe-core"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.88"
+description = "Nsembe Play media engine: library, scanner, metadata, database and playback (UI-agnostic)"
+
+[dependencies]
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio", "sqlite", "migrate", "macros", "derive"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time", "fs", "process", "io-util", "net"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+log = "0.4"
+lofty = "0.22"
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "webp", "bmp"] }
+notify = "8"
+notify-debouncer-full = "0.5"
+walkdir = "2"
+regex = "1"
+xxhash-rust = { version = "0.8", features = ["xxh3"] }
+strsim = "0.11"
+dunce = "1"
+which = "7"
+futures = "0.3"
+
+[dev-dependencies]
+tempfile = "3"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "test-util"] }
